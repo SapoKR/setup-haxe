@@ -72,7 +72,7 @@ abstract class Asset {
       }
 
       default: {
-        throw new Error(`unknown ext: ${ext}`); // eslint-disable-line @typescript-eslint/restrict-template-expressions
+        throw new Error(`unknown ext: ${ext} / EXT ERROR`); // eslint-disable-line @typescript-eslint/restrict-template-expressions
       }
     }
   }
@@ -187,7 +187,7 @@ export class HaxeAsset extends Asset {
       }
 
       default: {
-        throw new Error(`${plat} not supported`); // eslint-disable-line @typescript-eslint/restrict-template-expressions
+        throw new Error(`${plat} not supported / NIGHTLY ERROR`); // eslint-disable-line @typescript-eslint/restrict-template-expressions
       }
     }
   }
@@ -222,7 +222,7 @@ export class Env {
       }
 
       default: {
-        throw new Error(`${plat} not supported`);
+        throw new Error(`${plat} not supported / PLATFORM ERROR`);
       }
     }
   }
@@ -239,7 +239,7 @@ export class Env {
       }
 
       default: {
-        throw new Error(`${arch} not supported`);
+        throw new Error(`${arch} not supported! / ARCH ERROR`);
       }
     }
   }
