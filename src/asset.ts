@@ -234,6 +234,10 @@ export class Env {
         return '64';
       }
 
+       case 'arm64': {
+        return 'arm64';
+      }
+
       default: {
         throw new Error(`${arch} not supported`);
       }
